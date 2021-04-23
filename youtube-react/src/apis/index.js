@@ -29,3 +29,12 @@ export const fetchSelectedData = async(id) => {
         }
     })
 }
+
+export const fetchRelatedData = async (id) => {
+    return await youtube.get('/search', {
+        params: {
+            ...params,
+            relatedToVideoId: id
+        }
+    })
+}
