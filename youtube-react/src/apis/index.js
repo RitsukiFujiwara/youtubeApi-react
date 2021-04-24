@@ -38,3 +38,12 @@ export const fetchRelatedData = async (id) => {
         }
     })
 }
+
+export const fetchSearchData = async(query) => {
+    return await youtube.get('/search',{
+        params:{
+            ...params,
+            q: query
+        }
+    })
+}
